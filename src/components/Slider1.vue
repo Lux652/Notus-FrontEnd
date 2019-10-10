@@ -1,0 +1,89 @@
+<template>
+    <transition-group name="fade" mode="out-in" tag="div" id="slides">
+        <div class="slideContainer" :key="image.id">
+              
+            <div class="slideImg" :style="setBackgroundImage">
+                <img class="notus-logo" src="../assets/Notus-logo-main.svg" alt="">
+                <div class="layer"></div>                 
+            </div>
+        </div>
+            
+    </transition-group>
+</template>
+
+<script>
+export default {
+    props: ["image"],
+    computed:{
+        setBackgroundImage(){
+            // return { background: "url("+this.image.path+")"};
+             return { background: `url(${this.image.path})` }
+        }
+    }
+}
+// background: linear-gradient(rgba(8, 27, 47, .7)),url('../assets/notus-task1-img1.jpg');
+</script>
+
+<style>
+.layer {
+    background-color: rgba(8, 27, 47, .7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.notus-logo{
+    position:absolute;
+    z-index:2;
+  left: 50%;
+  margin-left: -50px;
+  margin-top:40px;
+}
+#slides .slideContainer{
+    height:100vh;
+    width: 100%;
+}
+#slides .slideImg{
+    height:100vh;
+    width: 100%;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-fill-mode: forwards;
+    animation-name:zoom;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+
+.fade-enter-active{
+    animation-name:fadeEnter;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+.fade-move{
+    transition: all 1s;
+}
+.fade-leave-active{
+    animation-name:fadeLeave;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    position:absolute;
+}
+@keyframes fadeEnter{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+@keyframes fadeLeave{
+    from{
+        opacity:1;
+    }
+    to{
+        opacity:0;
+    }
+}
+</style>

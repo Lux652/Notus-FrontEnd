@@ -6,12 +6,43 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>notus-frontend-zadatak</title>
+    <style>
+      .loader {
+        background-color: #081B2F;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        right:0;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        opacity:1;
+        
+      }
+      
+      .fadeout { 
+         animation: fadeout 4s backwards;       
+      }
+      
+      @keyframes fadeout {
+        to {
+        opacity: 0;
+        visibility: hidden;
+        }
+      }
+      </style>
   </head>
   <body>
     <noscript>
       <strong>We're sorry but notus-frontend-zadatak doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app"></div>
+    <div id="app">
+      <div id="loading" class="loader fadeout">
+        <img src="img\Notus-logo-loading.svg" alt="">
+      </div>
+    </div>
     <!-- built files will be auto injected -->
   </body>
 </html>

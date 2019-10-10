@@ -1,18 +1,34 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+	<Task1/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import Task1 from "@/components/Task1.vue"
 
 export default {
+    beforeMount() {
+    this.delay(1800);
+  },
   name: "home",
   components: {
-    HelloWorld
+	Task1
+  },
+    methods: {
+    delay(ms) {
+      const startPoint = new Date().getTime();
+      while (new Date().getTime() - startPoint <= ms) {
+        /* wait */
+      }
+    }
   }
 };
 </script>
+
+<style>
+.home{
+  height:100%;
+}
+</style>
