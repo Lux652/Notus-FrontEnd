@@ -1,5 +1,5 @@
 <template>
-  <div class="task3">
+  <div class="task3" id="task4">
     <Carousel :items="items.slice(0, this.itemsLimit)" :limit="showLimit" />
   </div>
 </template>

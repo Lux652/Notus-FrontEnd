@@ -1,5 +1,5 @@
 <template>
- <div class="parent">
+ <div class="parent" id="task3">
 <div class="div1"><p class="task2-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duo Reges: constructio interrete. Ut aliquid scire se gaudeant? Illi enim inter se dissentiunt. Nec vero sum nescius esse utilitatem in historia, non modo voluptatem. Quamquam te quidem video minime esse deterritum.</p></div>
 <div class="div2"><img src="../assets/notus-task2-img1.jpg" alt="">  </div>
 <div class="div3"><img src="../assets/notus-task2-img3.jpg" alt="">  </div>
@@ -17,7 +17,7 @@ export default {
 <style>
 .parent {
   display: grid;
-  grid-template-columns: repeat(3, 1fr) 2fr repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr) 1fr repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap:1.5%;
   grid-row-gap: 1%;
