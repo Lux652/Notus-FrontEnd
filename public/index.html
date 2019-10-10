@@ -23,15 +23,14 @@
       }
       
       .fadeout { 
-         animation: fadeout 4s backwards;       
+        -webkit-animation: fadeinout 4s linear forwards;
+        animation: fadeinout 4s linear forwards;      
       }
       
-      @keyframes fadeout {
-        to {
-        opacity: 0;
-        visibility: hidden;
-        }
-      }
+      @keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
       </style>
   </head>
   <body>
