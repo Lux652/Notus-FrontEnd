@@ -2,6 +2,7 @@
   <div class="home">
     <Task1 />
 	<Task2/>
+  <Task3/>
   </div>
 </template>
 
@@ -9,6 +10,7 @@
 // @ is an alias to /src
 import Task1 from "@/components/Task1.vue";
 import Task2 from "@/components/Task2.vue";
+import Task3 from "@/components/Task3.vue";
 
 export default {
   beforeMount() {
@@ -17,7 +19,8 @@ export default {
   name: "home",
   components: {
     Task1,
-    Task2
+    Task2,
+    Task3
   },
   methods: {
     delay(ms) {

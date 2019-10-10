@@ -1,50 +1,72 @@
 <template>
- <div class="parent">
-<div class="div1"><p class="task2-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duo Reges: constructio interrete. Ut aliquid scire se gaudeant? Illi enim inter se dissentiunt. Nec vero sum nescius esse utilitatem in historia, non modo voluptatem. Quamquam te quidem video minime esse deterritum.</p></div>
-<div class="div2"><img src="../assets/notus-task2-img1.jpg" alt="">  </div>
-<div class="div3"><img src="../assets/notus-task2-img3.jpg" alt="">  </div>
-<div class="div4"><img src="../assets/notus-task2-img2.jpg" alt="">  </div>
-<div class="div5"><img src="../assets/notus-task2-img4.jpg" alt="">  </div>
-</div> 
+  <div class="task3">
+
+    <!-- <div>
+      Show limit:
+      <input
+        class="limit"
+        type="number"
+        min="0"
+        :max="limitedItems.length"
+        v-model.number="showLimit"
+      />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Items limit:
+      <input
+        class="limit"
+        type="number"
+        min="0"
+        :max="items.length"
+        v-model.number="itemsLimit"
+      />
+    </div> -->
+
+    <Carousel :items="items.slice(0, this.itemsLimit)" :limit="showLimit" />
+  </div>
 </template>
-    
+
 <script>
+import Carousel from "@/components/Carousel.vue";
+
 export default {
-  name: "Task2"
+  name: "Task3",
+  components: {
+    Carousel
+  },
+  data() {
+    return {
+      showLimit: 3,
+      items: [
+        { id: 0, path: require("../assets/notus-task3-img1.jpg")},
+        { id: 1, path: require("../assets/notus-task3-img2.jpg")  },
+        { id: 2, path: require("../assets/notus-task3-img3.jpg")  },
+        { id: 3, path: require("../assets/notus-task3-img4.jpg")  },
+      ],
+    itemsLimit: 4,
+    };
+  },
+  computed: {
+    limitedItems() {
+      return this.items.slice(0, this.itemsLimit);
+    }
+  },
+  watch: {
+    itemsLimit(newItemsLimit) {
+      if (this.showLimit > newItemsLimit) this.showLimit = newItemsLimit;
+      else if (newItemsLimit > 0 && this.showLimit === 0)
+        this.showLimit = newItemsLimit;
+    }
+  }
 };
 </script>
 
 <style>
-.parent {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr) 2fr repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap:1.5%;
-  grid-row-gap: 1%;
-  align-items: center;
-  justify-content: center;
-}
 
-.div1 {
-  grid-area: 1 / 3 / 2 / 6;
+.limit {
+  margin: 0 auto;
+  width: 20px;
 }
-.div2 {
-  grid-area: 2 / 4 / 3 / 5;
-}
-.div3 {
-  grid-area: 3 / 4 / 4 / 5;
-}
-.div4 {
-  grid-area: 2 / 5 / 4 / 6;
-}
-.div5 {
-  grid-area: 2 / 3 / 4 / 4;
-}
-
-.task2-text{
-    font-size:18px;
-letter-spacing: 0;
-color: #5C5C5C;
-opacity: 1;
+.task3{
+    margin-top:10%;
+    height:100vh;
 }
 </style>
