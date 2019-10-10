@@ -18,7 +18,7 @@ import Footer from "@/components/Footer.vue";
 
 export default {
   beforeMount() {
-    this.delay(3900);
+    this.delay(2900);
   },
   name: "home",
   components: {

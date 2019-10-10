@@ -4,13 +4,20 @@
     <div class="btn-menu">
       <p>Menu</p>
       <button @click="toggleMenu">
-      <img src="../assets/notus-meni.svg" alt=""></button>
+        <img src="../assets/notus-meni.svg" alt />
+      </button>
     </div>
     <Menu :model="showMenu" @toggle-menu="toggleMenu" />
-    <img class="notus-logo" src="../assets/Notus-logo-main.svg" alt="">
-    <div class="previous" @click="previous()"><img class="img-prev" src="../assets/next.svg" alt=""></div>
-    <div class="counter"><p>{{this.counter}}/{{this.images.length}}</p></div>
-    <div class="next" @click="next()"><img class="img-next" src="../assets/next.svg" alt=""></div>
+    <img class="notus-logo" src="../assets/Notus-logo-main.svg" alt />
+    <div class="previous" @click="previous()">
+      <img class="img-prev" src="../assets/next.svg" alt />
+    </div>
+    <div class="counter">
+      <p>{{this.counter}}/{{this.images.length}}</p>
+    </div>
+    <div class="next" @click="next()">
+      <img class="img-next" src="../assets/next.svg" alt />
+    </div>
     <h1 class="notus-text">Notus Front-end test</h1>
   </div>
 </template>
@@ -42,7 +49,7 @@ export default {
         }
       ],
       chosenImage: 0,
-      counter:1,
+      counter: 1,
       showMenu: false
     };
   },
@@ -59,7 +66,7 @@ export default {
       this.counter--;
       if (flag < 0) {
         flag = this.images.length - 1;
-        this.counter-1;
+        this.counter - 1;
       }
       this.chosenImage = flag;
     },
@@ -73,7 +80,7 @@ export default {
       }
       this.chosenImage = flag;
     },
-        toggleMenu() {
+    toggleMenu() {
       this.showMenu = !this.showMenu;
     }
   }
@@ -88,66 +95,66 @@ export default {
 
 #slider .next,
 #slider .previous {
-position:absolute;
-z-index:2;
-bottom:10%;
+  position: absolute;
+  z-index: 2;
+  bottom: 10%;
 }
 #slider .previous {
-left:0;
-right:10%;
-bottom:10%;
+  left: 0;
+  right: 10%;
+  bottom: 10%;
 }
-#slider .next{
-left:10%;
-right:0;
+#slider .next {
+  left: 10%;
+  right: 0;
 }
-.img-prev{
-    transform: rotate(180deg);
+.img-prev {
+  transform: rotate(180deg);
 }
 .notus-logo {
   position: absolute;
   z-index: 2;
   left: 50%;
   margin-left: -50px;
-  top:0;
-  margin-top:40px;
+  top: 0;
+  margin-top: 40px;
 }
-.btn-menu{
+.btn-menu {
   position: absolute;
   z-index: 2;
   left: 5%;
-  top:0;
-  margin-top:40px;
+  top: 0;
+  margin-top: 40px;
 }
-.btn-menu p{
-  color:#FFFFFF;
-  margin-bottom:-2%;
-  font-size:12px;
+.btn-menu p {
+  color: #ffffff;
+  margin-bottom: -2%;
+  font-size: 12px;
 }
-.btn-menu button{
-  background:none;
-  border:none;
+.btn-menu button {
+  background: none;
+  border: none;
 }
-.notus-text{
-    position: absolute;
-    z-index:2;
-    color:#fff;
-    font-weight: bold;
-    font-size:60px;
-    bottom: 40%;
-    text-align: center;
-    left: 0;
-    right:0;
+.notus-text {
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  font-weight: bold;
+  font-size: 60px;
+  bottom: 40%;
+  text-align: center;
+  left: 0;
+  right: 0;
 }
-.counter{
-    position:absolute;
-    z-index:2;
-    color:#fff;
-    font-weight: 100;
-    bottom:8.8%;
-    left:0;
-    right:0;
-    font-size:19px;
-    opacity:0.6;
+.counter {
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  font-weight: 100;
+  bottom: 8.8%;
+  left: 0;
+  right: 0;
+  font-size: 19px;
+  opacity: 0.6;
 }
 </style>

@@ -2,23 +2,22 @@
   <transition name="fade">
     <div class="navbar" v-if="model">
       <img class="notus-logo" src="../assets/Notus-logo-meni.svg" alt />
-          <div class="btn-menu">
-      <p>Exit</p>
-      <button @click.prevent="$emit('toggle-menu', false);">
-      <img src="../assets/notus-meni-close.svg" alt=""></button>
-    </div>
+      <div class="btn-menu">
+        <p>Exit</p>
+        <button @click.prevent="$emit('toggle-menu', false);">
+          <img src="../assets/notus-meni-close.svg" alt />
+        </button>
+      </div>
       <ul class="list">
-        <!-- <li class="list-item"><a href="/home">Home</a></li>
-        <li class="list-item"><a href="/profile">Profile</a></li>
-        <li class="list-item"><a href="/about">About</a></li>
-        <li class="list-item"><a href="/pricing">Pricing</a></li>-->
-        <!-- <li class="list-item">
-          <a href="#" @click.prevent="$emit('toggle-menu', false);">Cerrar</a>
-        </li> -->
-        <router-link class="list-item" to="#task3"><b>TASK 3</b></router-link> 
-        <li class="list-item"><a @click="scrollMeTo('task3')"><b>TASK 3</b></a></li>
-        <li class="list-item"><a href=""><b>TASK 4</b></a></li>
-        <li class="list-item"><a href=""><b>TASK 5</b></a></li>
+        <router-link class="list-item" to="#task3">
+          <b>TASK 3</b>
+        </router-link>
+        <router-link class="list-item" to="#task4">
+          <b>TASK 4</b>
+        </router-link>
+        <router-link class="list-item" to="#task5">
+          <b>TASK 5</b>
+        </router-link>
       </ul>
     </div>
   </transition>
@@ -35,6 +34,11 @@ export default {
       type: Boolean,
       default: false
     }
+  },
+    watch: {
+    '$route' () {
+      $emit('toggle-menu', false);
+    }
   }
 };
 </script>
@@ -42,7 +46,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .navbar {
-  background-color:#F89D36;
+  background-color: #f89d36;
   position: absolute;
   height: 100vh;
   min-width: 2000px;
@@ -51,7 +55,7 @@ export default {
   z-index: 999;
 }
 
- .list {
+.list {
   font-size: 20px;
   list-style: none;
   margin: 2px 0 0 0;
@@ -60,21 +64,22 @@ export default {
   z-index: 2;
   left: 15%;
   top: 35%;
-} 
+}
 
 .list-item {
   color: white;
   margin: 1px;
   padding: 15px;
 }
-router-link{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 .list-item > b {
   color: white;
-  font-size:60px;
-  text-decoration: none;
-} 
+  font-size: 60px;
+  display: block;
+  margin-top: 20px;
+}
 
 .fade-enter-active,
 .fade-leave-active {
