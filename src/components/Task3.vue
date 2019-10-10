@@ -1,25 +1,5 @@
 <template>
   <div class="task3">
-
-    <!-- <div>
-      Show limit:
-      <input
-        class="limit"
-        type="number"
-        min="0"
-        :max="limitedItems.length"
-        v-model.number="showLimit"
-      />
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Items limit:
-      <input
-        class="limit"
-        type="number"
-        min="0"
-        :max="items.length"
-        v-model.number="itemsLimit"
-      />
-    </div> -->
-
     <Carousel :items="items.slice(0, this.itemsLimit)" :limit="showLimit" />
   </div>
 </template>
@@ -43,11 +23,6 @@ export default {
       ],
     itemsLimit: 4,
     };
-  },
-  computed: {
-    limitedItems() {
-      return this.items.slice(0, this.itemsLimit);
-    }
   },
   watch: {
     itemsLimit(newItemsLimit) {

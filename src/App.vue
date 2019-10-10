@@ -18,7 +18,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #5C5C5C;
+  line-height: 30px;
 }
 /* #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;

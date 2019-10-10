@@ -10,13 +10,10 @@
           <img :src="item.path" alt />
         </div>
       </div>
-      <!-- <a class="carousel-nav"  @click="next">NEXT &#x3E;</a> -->
       <div class="carousel-nav" @click="next">
         <img class="img-next" src="../assets/next.svg" alt />
       </div>
     </div>
-    <!-- :style="{ background: `url(${item.path})` }" -->
-    <!-- <p class="debug">CURRENT OFFSET: {{ offset }}</p> -->
   </div>
 </template>
 
@@ -49,12 +46,18 @@ export default {
   },
   methods: {
     prev() {
-      if (this.offset <= 0) this.offset = this.maxOffset;
-      else this.offset = this.offset - 1;
+      if (this.offset <= 0) {
+        this.offset = this.maxOffset;
+      } else {
+        this.offset = this.offset - 1;
+      }
     },
     next() {
-      if (this.offset >= this.maxOffset) this.offset = 0;
-      else this.offset = this.offset + 1;
+      if (this.offset >= this.maxOffset) {
+        this.offset = 0;
+      } else {
+        this.offset = this.offset + 1;
+      }
     }
   },
   watch: {
@@ -66,7 +69,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .carousel {
   margin-top: 2rem;
@@ -80,22 +82,9 @@ export default {
   height: 100vh;
   opacity: 1;
 }
-
-/* .carousel-nav {
-  color: #42b983;
-  text-decoration: none;
-  margin: 0 1rem;
-} */
-
 .carousel-items {
   display: flex;
-
-  /* grid-template-columns: repeat(5, 1fr);
-grid-template-rows: repeat(5, 1fr);
-grid-column-gap: 0px;
-grid-row-gap: 0px;  */
 }
-
 .carousel-item {
   width: 500px;
   height: 560px;
@@ -103,7 +92,6 @@ grid-row-gap: 0px;  */
   align-items: center;
   justify-content: center;
 }
-
 .img-prev {
   transform: rotate(180deg);
 }
