@@ -1,13 +1,29 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
-			<router-link to="/">Home</router-link> |
-			<router-link to="/about">About</router-link>
-    </div>-->
-    <router-view />
+    <Loader :isLoading="isLoading"/>
+    <main v-if="!isLoading">
+      <router-view />
+    </main>
   </div>
 </template>
 
+<script>
+import Loader from "@/components/Loader.vue";
+export default {
+    name: "App",
+  components: {
+    Loader
+  },
+    data() {
+    return { isLoading: true };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 3000);
+  }
+}
+</script>
 <style>
 body {
   margin: 0;
@@ -18,7 +34,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #5C5C5C;
+  color: #5c5c5c;
   line-height: 30px;
 }
 /* #app {

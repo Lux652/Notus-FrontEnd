@@ -2,8 +2,7 @@
   <transition-group name="fade" mode="out-in" tag="div" id="slides">
     <div class="slideContainer" :key="image.id">
       <div class="slideImg" :style="setBackgroundImage">
-        <div class="layer">    
-        </div>     
+        <div class="layer"></div>
       </div>
     </div>
   </transition-group>

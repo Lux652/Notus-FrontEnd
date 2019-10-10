@@ -12,14 +12,21 @@
       ></iframe>
     </div>
     <div class="task4-text-container">
-      <p
-        class="text-first-part"
-      >Quas enim kakaw Graeci appellant, vitia malo quam malitias nominare. Idem adhuc; Idemque diviserunt naturam hominis in animum et corpus. Istam voluptatem, inquit, Epicurus ignorat? Duo enim genera quae erant, fecit tria.</p>
+      <p class="text-first-part">
+        Quas enim kakaw Graeci appellant, vitia malo quam malitias nominare.
+        Idem adhuc; Idemque diviserunt naturam hominis in animum et corpus.
+        Istam voluptatem, inquit, Epicurus ignorat? Duo enim genera quae erant,
+        fecit tria.
+      </p>
       <p class="text-second-part">
         <span>
-          <b style="color:#42BEB2">Ut proverbia non nulla veriora sint quam vestra dogmata</b>
+          <b style="color:#42BEB2"
+            >Ut proverbia non nulla veriora sint quam vestra dogmata</b
+          >
         </span>
-        <br />An haec ab eo non dicuntur? Idcirco enim non desideraret, quia, quod dolore caret, id in voluptate est. Quoniam, si dis placet, ab Epicuro loqui discimus. Quid sequatur, quid repugnet, vident.
+        <br />An haec ab eo non dicuntur? Idcirco enim non desideraret, quia,
+        quod dolore caret, id in voluptate est. Quoniam, si dis placet, ab
+        Epicuro loqui discimus. Quid sequatur, quid repugnet, vident.
       </p>
       <button class="btn-border">
         <span>
@@ -35,7 +42,6 @@ export default {
   name: "Task4"
 };
 </script>
-
 
 <style>
 /* .map-container {
@@ -95,7 +101,7 @@ export default {
   display: block;
   padding: 30px 20px;
   color: #081b2f;
-  font-size:18px;
+  font-size: 18px;
 }
 /* button::before, button::after{
   content:"";
@@ -106,8 +112,8 @@ export default {
   background: #081B2F;
 } */
 
-.btn-border:hover{
-    background:#f89d36;
-    transition: all 0.5s linear;
+.btn-border:hover {
+  background: #f89d36;
+  transition: all 0.5s linear;
 }
 </style>

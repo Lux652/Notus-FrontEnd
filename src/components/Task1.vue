@@ -13,7 +13,7 @@
       <img class="img-prev" src="../assets/next.svg" alt />
     </div>
     <div class="counter">
-      <p>{{this.counter}}/{{this.images.length}}</p>
+      <p>{{ this.counter }}/{{ this.images.length }}</p>
     </div>
     <div class="next" @click="next()">
       <img class="img-next" src="../assets/next.svg" alt />
@@ -21,7 +21,7 @@
     <h1 class="notus-text">Notus Front-end test</h1>
   </div>
 </template>
-    
+
 <script>
 import Slider1 from "@/components/Slider1.vue";
 import Menu from "@/components/Menu.vue";

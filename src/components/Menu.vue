@@ -4,7 +4,7 @@
       <img class="notus-logo" src="../assets/Notus-logo-meni.svg" alt />
       <div class="btn-menu">
         <p>Exit</p>
-        <button @click.prevent="$emit('toggle-menu', false);">
+        <button @click.prevent="$emit('toggle-menu', false)">
           <img src="../assets/notus-meni-close.svg" alt />
         </button>
       </div>
@@ -33,11 +33,6 @@ export default {
     model: {
       type: Boolean,
       default: false
-    }
-  },
-    watch: {
-    '$route' () {
-      $emit('toggle-menu', false);
     }
   }
 };
