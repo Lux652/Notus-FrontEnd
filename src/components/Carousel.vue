@@ -85,7 +85,7 @@ export default {
   display: flex;
 }
 .carousel-item {
-  width: 500px;
+  width: 350px;
   height: 560px;
   display: flex;
   align-items: center;
@@ -93,5 +93,20 @@ export default {
 }
 .img-prev {
   transform: rotate(180deg);
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  .carousel-item {
+  width: 350px;
+}
+  
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+    .carousel-item {
+  width: 300px;
+}
 }
 </style>

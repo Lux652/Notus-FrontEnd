@@ -30,7 +30,8 @@ export default {
 </script>
 
 <style>
-.parent {
+@media (min-width: 1281px) {
+  .parent {
   display: grid;
   grid-template-columns: repeat(3, 1fr) 1fr repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -55,11 +56,15 @@ export default {
 .div5 {
   grid-area: 2 / 3 / 4 / 4;
 }
-
-.task2-text {
-  font-size: 18px;
-  letter-spacing: 0;
-  color: #5c5c5c;
-  opacity: 1;
+  
 }
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  .parent {
+  display: grid;
+  grid-template-columns: repeat(auto-fill);
+}
+}
+
 </style>

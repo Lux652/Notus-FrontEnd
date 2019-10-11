@@ -1,6 +1,6 @@
 <template>
   <div class="task3" id="task4">
-    <Carousel :items="items.slice(0, this.itemsLimit)" :limit="showLimit" />
+    <Carousel :items="items" :limit="showLimit" />
   </div>
 </template>
 
@@ -13,22 +13,38 @@ export default {
     Carousel
   },
   data() {
-    return {
-      showLimit: 3,
+    return {    
+      window: {
+      width: 0
+    },
+      showLimit: 0,
       items: [
         { id: 0, path: require("../assets/notus-task3-img1.jpg") },
         { id: 1, path: require("../assets/notus-task3-img2.jpg") },
         { id: 2, path: require("../assets/notus-task3-img3.jpg") },
         { id: 3, path: require("../assets/notus-task3-img4.jpg") }
       ],
-      itemsLimit: 4
+      
     };
   },
-  watch: {
-    itemsLimit(newItemsLimit) {
-      if (this.showLimit > newItemsLimit) this.showLimit = newItemsLimit;
-      else if (newItemsLimit > 0 && this.showLimit === 0)
-        this.showLimit = newItemsLimit;
+    created() {
+    window.addEventListener('resize', this.handleResize)
+    this.handleResize();
+  },
+  destroyed() {
+    window.removeEventListener('resize', this.handleResize)
+  },
+  methods: {
+    handleResize() {
+      this.window.width = window.innerWidth;
+      if(this.window.width>=1281){
+        this.showLimit = 3;
+      } else if (this.window.width >=1025 && this.window.width <=1280) {
+        this.showLimit = 2;
+      } 
+      else {
+        this.showLimit = 1;
+      }
     }
   }
 };

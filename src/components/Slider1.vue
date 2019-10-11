@@ -13,12 +13,10 @@ export default {
   props: ["image"],
   computed: {
     setBackgroundImage() {
-      // return { background: "url("+this.image.path+")"};
       return { background: `url(${this.image.path})` };
     }
   }
 };
-// background: linear-gradient(rgba(8, 27, 47, .7)),url('../assets/notus-task1-img1.jpg');
 </script>
 
 <style>
@@ -36,16 +34,8 @@ export default {
 }
 #slides .slideImg {
   height: 100vh;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  animation-fill-mode: forwards;
-  animation-name: zoom;
-  animation-duration: 4s;
-  animation-iteration-count: 1;
+  max-width:auto;
 }
-
 .fade-enter-active {
   animation-name: fadeEnter;
   animation-duration: 1s;

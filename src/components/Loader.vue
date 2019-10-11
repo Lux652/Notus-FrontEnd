@@ -27,8 +27,8 @@ export default {
 }
 
 .fadeout {
-  -webkit-animation: fadeout 3s linear forwards;
-  animation: fadeout 3s linear forwards;
+  -webkit-animation: fadeout 2s linear forwards;
+  animation: fadeout 2s linear forwards;
 }
 
 @keyframes fadeout {

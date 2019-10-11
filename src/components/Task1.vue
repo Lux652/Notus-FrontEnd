@@ -66,12 +66,12 @@ export default {
     moveLeft() {
       let flag = this.chosenImage;
       flag--;
-    //   this.counter--;
+      //   this.counter--;
       if (flag < 0) {
-        flag = this.images.length - 1;  
+        flag = this.images.length - 1;
       }
-	  this.chosenImage = flag;
-	  this.counter = (this.chosenImage+1)
+      this.chosenImage = flag;
+      this.counter = this.chosenImage + 1;
     },
     moveRight() {
       let flag = this.chosenImage;
@@ -91,9 +91,20 @@ export default {
 </script>
 
 <style>
-#slider {
+/* #slider {
   position: relative;
   overflow: hidden;
+} */
+
+.notus-text {
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  font-weight: bold;
+  bottom: 40%;
+  text-align: center;
+  left: 0;
+  right: 0;
 }
 #slider .previous {
   position: absolute;
@@ -141,7 +152,7 @@ button {
   background: none;
   border: none;
 }
-.notus-text {
+/* .notus-text {
   position: absolute;
   z-index: 2;
   color: #fff;
@@ -151,7 +162,7 @@ button {
   text-align: center;
   left: 0;
   right: 0;
-}
+} */
 .counter {
   position: absolute;
   z-index: 2;
@@ -162,5 +173,82 @@ button {
   right: 0;
   font-size: 19px;
   opacity: 0.6;
+}
+
+@media (min-width: 1281px) {
+  .notus-text {
+    font-size: 60px;
+  }
+
+  .notus-logo {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    margin-left: -50px;
+    top: 0;
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .notus-text {
+    font-size: 40px;
+  }
+
+  #slider .previous {
+    left: 44%;
+  }
+  #slider .next {
+    right: 44%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .notus-text {
+    font-size: 40px;
+  }
+
+  .notus-logo {
+    width: 10%;
+    margin-left: -25px;
+  }
+
+  #slider .previous {
+    left: 43.5%;
+  }
+  #slider .next {
+    right: 43.5%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .notus-text {
+    font-size: 30px;
+  }
+
+  .notus-logo {
+    width: 8%;
+    margin-left: -15px;
+  }
+
+  #slider .previous {
+    left: 40%;
+  }
+  #slider .next {
+    right: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+    .notus-logo {
+    width: 9%;
+    margin-left: -15px;
+  }
+  #slider .previous {
+    left: 35%;
+  }
+  #slider .next {
+    right: 35%;
+  }
 }
 </style>
