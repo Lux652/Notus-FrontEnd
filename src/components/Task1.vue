@@ -9,15 +9,18 @@
     </div>
     <Menu :model="showMenu" @toggle-menu="toggleMenu" />
     <img class="notus-logo" src="../assets/Notus-logo-main.svg" alt />
-    <div class="previous" @click="previous()">
+
+    <button class="previous" @click="previous()">
       <img class="img-prev" src="../assets/next.svg" alt />
-    </div>
+    </button>
+
     <div class="counter">
       <p>{{ this.counter }}/{{ this.images.length }}</p>
     </div>
-    <div class="next" @click="next()">
+    <button class="next" @click="next()">
       <img class="img-next" src="../assets/next.svg" alt />
-    </div>
+    </button>
+
     <h1 class="notus-text">Notus Front-end test</h1>
   </div>
 </template>
@@ -63,12 +66,12 @@ export default {
     moveLeft() {
       let flag = this.chosenImage;
       flag--;
-      this.counter--;
+    //   this.counter--;
       if (flag < 0) {
-        flag = this.images.length - 1;
-        this.counter - 1;
+        flag = this.images.length - 1;  
       }
-      this.chosenImage = flag;
+	  this.chosenImage = flag;
+	  this.counter = (this.chosenImage+1)
     },
     moveRight() {
       let flag = this.chosenImage;
@@ -92,22 +95,25 @@ export default {
   position: relative;
   overflow: hidden;
 }
-
-#slider .next,
 #slider .previous {
+  position: absolute;
+  z-index: 3;
+  bottom: 10%;
+  left: 45%;
+  margin-bottom: 10px;
+}
+#slider .next {
   position: absolute;
   z-index: 2;
   bottom: 10%;
+  right: 45%;
+  margin-bottom: 10px;
 }
-#slider .previous {
-  left: 0;
-  right: 10%;
-  bottom: 10%;
+button {
+  background: none;
+  border: none;
 }
-#slider .next {
-  left: 10%;
-  right: 0;
-}
+
 .img-prev {
   transform: rotate(180deg);
 }
@@ -151,7 +157,7 @@ export default {
   z-index: 2;
   color: #fff;
   font-weight: 100;
-  bottom: 8.8%;
+  bottom: 9.5%;
   left: 0;
   right: 0;
   font-size: 19px;

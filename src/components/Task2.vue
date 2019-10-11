@@ -8,10 +8,18 @@
         voluptatem. Quamquam te quidem video minime esse deterritum.
       </p>
     </div>
-    <div class="div2"><img src="../assets/notus-task2-img1.jpg" alt="" /></div>
-    <div class="div3"><img src="../assets/notus-task2-img3.jpg" alt="" /></div>
-    <div class="div4"><img src="../assets/notus-task2-img2.jpg" alt="" /></div>
-    <div class="div5"><img src="../assets/notus-task2-img4.jpg" alt="" /></div>
+    <div class="div2">
+      <img src="../assets/notus-task2-img1.jpg" alt />
+    </div>
+    <div class="div3">
+      <img src="../assets/notus-task2-img3.jpg" alt />
+    </div>
+    <div class="div4">
+      <img src="../assets/notus-task2-img2.jpg" alt />
+    </div>
+    <div class="div5">
+      <img src="../assets/notus-task2-img4.jpg" alt />
+    </div>
   </div>
 </template>
 

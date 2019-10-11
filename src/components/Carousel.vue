@@ -1,18 +1,17 @@
 <template>
   <div>
     <div class="carousel">
-      <!-- <a class="carousel-nav" @click="prev">&#x3C; PREV</a> -->
-      <div class="carousel-nav" @click="prev">
+      <button class="carousel-nav" @click="prev">
         <img class="img-prev" src="../assets/next.svg" alt />
-      </div>
+      </button>
       <div class="carousel-items">
         <div class="carousel-item" v-for="item in itemsShown" :key="item.id">
           <img :src="item.path" alt />
         </div>
       </div>
-      <div class="carousel-nav" @click="next">
+      <button class="carousel-nav" @click="next">
         <img class="img-next" src="../assets/next.svg" alt />
-      </div>
+      </button>
     </div>
   </div>
 </template>

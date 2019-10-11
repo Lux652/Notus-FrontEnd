@@ -12,7 +12,7 @@ export default {
 </script>
 
 <style>
-.load {
+.loader {
   background-color: #081b2f;
   overflow: hidden;
   top: 0;
@@ -26,18 +26,15 @@ export default {
   opacity: 1;
 }
 
-.fade {
-  -webkit-animation: fadeinout 4s linear forwards;
-  animation: fadeinout 4s linear forwards;
+.fadeout {
+  -webkit-animation: fadeout 3s linear forwards;
+  animation: fadeout 3s linear forwards;
 }
 
-@keyframes fadeinout {
-  0%,
-  100% {
+@keyframes fadeout {
+  to {
     opacity: 0;
-  }
-  50% {
-    opacity: 1;
+    visibility: hidden;
   }
 }
 </style>

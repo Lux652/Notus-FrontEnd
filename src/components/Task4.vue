@@ -20,9 +20,7 @@
       </p>
       <p class="text-second-part">
         <span>
-          <b style="color:#42BEB2"
-            >Ut proverbia non nulla veriora sint quam vestra dogmata</b
-          >
+          <b style="color:#42BEB2">Ut proverbia non nulla veriora sint quam vestra dogmata</b>
         </span>
         <br />An haec ab eo non dicuntur? Idcirco enim non desideraret, quia,
         quod dolore caret, id in voluptate est. Quoniam, si dis placet, ab
@@ -44,11 +42,6 @@ export default {
 </script>
 
 <style>
-/* .map-container {
-  overflow: hidden;
-  padding-top: 56.25%;
-  position: relative;
-} */
 .map-container iframe {
   display: block;
   width: 100vw;
@@ -103,14 +96,6 @@ export default {
   color: #081b2f;
   font-size: 18px;
 }
-/* button::before, button::after{
-  content:"";
-  width: 0;
-  height: 2px;
-  position: absolute;
-  transition: all 0.2s linear;
-  background: #081B2F;
-} */
 
 .btn-border:hover {
   background: #f89d36;

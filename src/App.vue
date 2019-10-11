@@ -1,29 +1,9 @@
 <template>
   <div id="app">
-    <Loader :isLoading="isLoading"/>
-    <main v-if="!isLoading">
-      <router-view />
-    </main>
+    <router-view />
   </div>
 </template>
 
-<script>
-import Loader from "@/components/Loader.vue";
-export default {
-    name: "App",
-  components: {
-    Loader
-  },
-    data() {
-    return { isLoading: true };
-  },
-  mounted() {
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 3000);
-  }
-}
-</script>
 <style>
 body {
   margin: 0;
