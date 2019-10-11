@@ -97,7 +97,7 @@ export default {
 
 @media (min-width: 1025px) and (max-width: 1280px) {
   .carousel-item {
-    width: 300px;
+    width: 350px;
   }
 }
 
