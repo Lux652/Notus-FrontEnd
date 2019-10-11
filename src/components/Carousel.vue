@@ -96,17 +96,14 @@ export default {
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
-  
   .carousel-item {
-  width: 350px;
-}
-  
+    width: 350px;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  
-    .carousel-item {
-  width: 300px;
-}
+  .carousel-item {
+    width: 300px;
+  }
 }
 </style>

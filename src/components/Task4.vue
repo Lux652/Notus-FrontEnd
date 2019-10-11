@@ -61,7 +61,7 @@ export default {
 .task4-container {
   display: grid;
   grid-template-columns: 1fr 1.8fr 1fr;
-  grid-template-rows:repeat(auto-fill);
+  grid-template-rows: repeat(auto-fill);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
@@ -89,7 +89,7 @@ export default {
   border: 5px solid #f89d36;
   opacity: 1;
   transition: all 0.5s linear;
-  margin-bottom:20%;
+  margin-bottom: 20%;
 }
 .btn-border span {
   display: block;

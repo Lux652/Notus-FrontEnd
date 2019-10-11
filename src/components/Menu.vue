@@ -94,9 +94,7 @@ a {
   margin-top: 40px;
 }
 
-
 @media (min-width: 1281px) {
-
   .notus-logo {
     position: absolute;
     z-index: 2;
@@ -107,60 +105,51 @@ a {
   }
 }
 
-
 @media (min-width: 768px) and (max-width: 1024px) {
-
-
   .notus-logo {
     width: 10%;
     margin-left: -25px;
   }
   .list {
-  font-size: 20px;
-  left: 10%;
-  margin-top:-10%;
-}
+    font-size: 20px;
+    left: 10%;
+    margin-top: -10%;
+  }
 
-
-.list-item > b {
-  font-size: 50px;
-}
-
+  .list-item > b {
+    font-size: 50px;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-
-
   .notus-logo {
     width: 8%;
     margin-left: -15px;
   }
   .list {
-  font-size: 20px;
-  left: 10%;
-  margin-top:-40%;
-}
+    font-size: 20px;
+    left: 10%;
+    margin-top: -40%;
+  }
 
-.list-item > b {
-  font-size: 40px;
-}
-
-
+  .list-item > b {
+    font-size: 40px;
+  }
 }
 
 @media (max-width: 480px) {
-    .notus-logo {
+  .notus-logo {
     width: 9%;
     margin-left: -15px;
   }
   .list {
-  font-size: 20px;
-  left: 10%;
-  margin-top:-50%;
-}
+    font-size: 20px;
+    left: 10%;
+    margin-top: -50%;
+  }
 
-.list-item > b {
-  font-size: 25px;
-}
+  .list-item > b {
+    font-size: 25px;
+  }
 }
 </style>

@@ -29,42 +29,57 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 @media (min-width: 1281px) {
   .parent {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr) 1fr repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 1.5%;
-  grid-row-gap: 1%;
-  align-items: center;
-  justify-content: center;
-}
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 1fr repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 1.5%;
+    grid-row-gap: 1%;
+    align-items: center;
+    justify-content: center;
+  }
 
-.div1 {
-  grid-area: 1 / 3 / 2 / 6;
-}
-.div2 {
-  grid-area: 2 / 4 / 3 / 5;
-}
-.div3 {
-  grid-area: 3 / 4 / 4 / 5;
-}
-.div4 {
-  grid-area: 2 / 5 / 4 / 6;
-}
-.div5 {
-  grid-area: 2 / 3 / 4 / 4;
-}
-  
+  .div1 {
+    grid-area: 1 / 3 / 2 / 6;
+  }
+  .div2 {
+    grid-area: 2 / 4 / 3 / 5;
+  }
+  .div3 {
+    grid-area: 3 / 4 / 4 / 5;
+  }
+  .div4 {
+    grid-area: 2 / 5 / 4 / 6;
+  }
+  .div5 {
+    grid-area: 2 / 3 / 4 / 4;
+  }
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
-  
   .parent {
-  display: grid;
-  grid-template-columns: repeat(auto-fill);
-}
+    display: grid;
+    grid-template-columns: repeat(auto-fill);
+  }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  img {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  img {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  img {
+    max-width: 80%;
+  }
+}
 </style>

@@ -34,7 +34,7 @@ export default {
 }
 #slides .slideImg {
   height: 100vh;
-  max-width:auto;
+  max-width: auto;
 }
 .fade-enter-active {
   animation-name: fadeEnter;

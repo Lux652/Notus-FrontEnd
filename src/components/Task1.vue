@@ -152,17 +152,7 @@ button {
   background: none;
   border: none;
 }
-/* .notus-text {
-  position: absolute;
-  z-index: 2;
-  color: #fff;
-  font-weight: bold;
-  font-size: 60px;
-  bottom: 40%;
-  text-align: center;
-  left: 0;
-  right: 0;
-} */
+
 .counter {
   position: absolute;
   z-index: 2;
@@ -240,7 +230,7 @@ button {
 }
 
 @media (max-width: 480px) {
-    .notus-logo {
+  .notus-logo {
     width: 9%;
     margin-left: -15px;
   }

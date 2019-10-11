@@ -4,7 +4,7 @@
       <p>© 2019. Notus IT d.o.o.</p>
     </div>
     <div class="footer-bottom">
-      <img class="footer-logo" src="../assets/Notus-logo-footer.svg" alt="" />
+      <img class="footer-logo" src="../assets/Notus-logo-footer.svg" alt />
     </div>
   </div>
 </template>
