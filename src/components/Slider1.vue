@@ -26,7 +26,7 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 #slides .slideContainer {
   height: 100vh;
@@ -34,7 +34,7 @@ export default {
 }
 #slides .slideImg {
   height: 100vh;
-  max-width: auto;
+  max-width:auto;
 }
 .fade-enter-active {
   animation-name: fadeEnter;

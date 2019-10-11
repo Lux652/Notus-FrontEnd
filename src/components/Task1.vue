@@ -235,10 +235,10 @@ button {
     margin-left: -15px;
   }
   #slider .previous {
-    left: 35%;
+    left: 30%;
   }
   #slider .next {
-    right: 35%;
+    right: 30%;
   }
 }
 </style>
