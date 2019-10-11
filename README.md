@@ -1,4 +1,4 @@
-#live preview
+# Live preview
 https://notus-frontend-zadatak.netlify.com/#/
 
 # notus-frontend-zadatak
